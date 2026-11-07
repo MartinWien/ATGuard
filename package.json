@@ -1,0 +1,45 @@
+{
+  "name": "atguard",
+  "productName": "ATGuard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A private desktop security companion for Windows.",
+  "author": "ATGuard",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "desktop:dev": "concurrently -k \"npm:dev\" \"wait-on http://127.0.0.1:5173 && electron . --dev\"",
+    "build": "vite build",
+    "start": "electron .",
+    "test": "node --test tests/*.test.*",
+    "package": "npm run build && electron-builder --win portable --x64",
+    "package:dir": "npm run build && electron-builder --win --dir --x64"
+  },
+  "dependencies": {
+    "lucide-react": "^0.577.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "concurrently": "^9.2.1",
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0",
+    "vite": "^8.3.6",
+    "wait-on": "^9.0.4"
+  },
+  "overrides": {
+    "minimatch@>=7.0.0 <11.0.1": "^11.0.1"
+  },
+  "build": {
+    "appId": "app.atguard.desktop",
+    "productName": "ATGuard",
+    "directories": { "output": "release", "buildResources": "assets" },
+    "files": ["dist/**/*", "electron/**/*", "assets/icon.png", "package.json"],
+    "asar": true,
+    "win": { "target": "portable", "icon": "assets/icon.ico", "signExecutable": false },
+    "portable": { "artifactName": "ATGuard-${version}-Windows.${ext}" }
+  }
+}

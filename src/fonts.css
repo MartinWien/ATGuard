@@ -1,0 +1,2 @@
+/* System fonts keep the app completely offline and respect Windows text rendering. */
+@font-face{font-family:Inter;src:local('Inter');font-display:swap;}
