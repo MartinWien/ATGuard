@@ -2,6 +2,12 @@
 
 A Windows desktop security companion with a black interface. ATGuard reads real protection settings, runs local scam-pattern checks, and gives you a clear place to review findings.
 
+## Project direction
+
+ATGuard is an early-stage project with the goal of helping Austrian companies recognize phishing attempts, scams, and suspicious requests for money or credentials. The plan is to develop it into a practical security companion for employees and small business teams, supported by clear explanations and visibility into Windows protection settings.
+
+The current release provides the local inspection tools listed below. Company deployments and broader protection features are future goals.
+
 ## Run the desktop app
 
 Download **[ATGuard for Windows](https://github.com/MartinWien/ATGuard/releases/download/v1.0.0/ATGuard-1.0.0-Windows.exe)** from the [v1.0.0 release](https://github.com/MartinWien/ATGuard/releases/tag/v1.0.0), then open it. This portable build does not require an installer.

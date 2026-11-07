@@ -3,7 +3,7 @@
   "productName": "ATGuard",
   "version": "1.0.0",
   "private": true,
-  "description": "A private desktop security companion for Windows.",
+  "description": "A Windows desktop security companion focused on phishing and scam awareness.",
   "author": "ATGuard",
   "license": "UNLICENSED",
   "type": "module",
